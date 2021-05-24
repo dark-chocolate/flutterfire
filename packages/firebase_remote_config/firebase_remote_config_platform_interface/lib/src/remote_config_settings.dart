@@ -3,8 +3,8 @@ class RemoteConfigSettings {
   /// Constructs an instance of [RemoteConfigSettings] with given [fetchTimeout]
   /// and [minimumFetchInterval].
   RemoteConfigSettings({
-    required this.fetchTimeout,
-    required this.minimumFetchInterval,
+    this.fetchTimeout = Duration(minutes: 1),
+    this.minimumFetchInterval = Duration(hours: 12),
   });
 
   /// Maximum Duration to wait for a response when fetching configuration from
